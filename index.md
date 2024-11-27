@@ -9,13 +9,19 @@ Add a short welcome message or introduction here. Aim to get the viewer interest
 
 ## **Template VGA Design**
 ### **Project Set-Up**
-Summarise the project set-up and design flow. Include a screenshot of your own set-up, for example see the image of my Project Summary window below. Guideline 1 short paragraph.
+The project is divided into 4 sections: Design sources, Constrains, Simulation sources and utility sources.
+Design Sources: In the design sources the u_clock is set to 25.000 and this controls the clock signals of the synthesis.The u_vga_sync handles the VGA synchronization and the u_colour_cycle manages VGA color transitions.
+                The files in this section are responsible for the colour gerenation on the screen.
+Contraints    : it consists of the Basys3_Master.xdc which is used to map logical signals to the physical pins on the board. This is to makes sure that both the simulation of the sofware and the synthesis on the hardwark                 work properly.
+Simulation    : it is used to simulates the software. It simulates the design but intyerfacing with the VGASync, ColourCycle and the VGATop. The Testbench tests all components.
 
-<img src="https://raw.githubusercontent.com/melgineer/fpga-vga-verilog/main/docs/assets/images/VGAPrjSum.png">
+<img src="https://github.com/Nokuvimba/SoCProject/blob/main/images/Screenshot%202024-11-12%20154634.png">
 ### **Template Code**
 Outline the structure and design of the Verilog code templates you were given. What do they do? Include reference to how a VGA interface works. Guideline: 2/3 short paragraphs, consider including screenshot(s).
 ### **Simulation**
 Explain the simulation process. Reference any important details, include a well-selected screenshot of the simulation. Guideline: 1/2 short paragraphs.
+<img src="https://github.com/Nokuvimba/SoCProject/blob/main/images/Screenshot%202024-11-12%20154634.png">
+
 ### **Synthesis**
 Describe the synthesis and implementation processes. Consider including 1/2 useful screenshot(s). Guideline: 1/2 short paragraphs.
 ### **Demonstration**
