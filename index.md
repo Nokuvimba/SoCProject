@@ -11,13 +11,15 @@ Add a short welcome message or introduction here. Aim to get the viewer interest
 ### **Project Set-Up**
 The project is divided into 4 sections: Design sources, Constrains, Simulation sources and utility sources.
 
-Design Sources:They contain the primary code that describes the hardware design for the for the VGA driver and is synthesized into a netlist during the synthesis process. In the design sources, the u_clock(clock wizard) is set to 25.000 and this controls the clock signals of the synthesis.The u_vga_sync handles the VGA synchronization and the u_colour_cycle manages VGA color transitions.The files in this section are responsible for the colour gerenation on the screen.
+Design Sources   : They contain the primary code that describes the hardware design for the for the VGA driver and is synthesized into a netlist during the synthesis process. In the design sources, the u_clock(clock wizard) is set to 25.000 and this controls the clock signals of the synthesis.The u_vga_sync handles the VGA synchronization and the u_colour_cycle manages VGA color transitions.The files in this section are responsible for the colour gerenation on the screen.
 
                 
-Contraints    : They are crucial during the implementation phase and they define physical specifications timing requirements, pin assignments it consists of the Basys3_Master.xdc which is used to map logical signals to the physical pins on the board. This is to make sure that both the simulation of the sofware and the synthesis on the hardware work properly.
+Contraints    : They are crucial during the implementation phase. They define timing requirements, pin assignments and physical specifications. It consists of the Basys3_Master.xdc which is used to map logical signals to the physical pins on the board. This is to make sure that both the simulation of the sofware and the synthesis on the hardware work properly.
 
 
-Simulation    : it is used to simulate the software. It simulates the design but interfacing with the VGASync, ColourCycle and the VGATop. The Testbench tests all components.
+Simulation    :The simulation sources are used in the verification process to simulate the software. It simulates the design but interfacing with the VGASync, ColourCycle and the VGATop. The Testbench tests all components.
+
+Utility  : The utility sources are not directly involved in synthesis or implementation unless they contribute to automation or design configuration.
 
 <img src="https://github.com/Nokuvimba/SoCProject/blob/main/images/Screenshot%202024-11-12%20154634.png">
 
@@ -32,9 +34,9 @@ The simulation is a vitual environment that helps to validate the functionality 
 ### **Synthesis and implementation process**
 Describe the synthesis and implementation processes. Consider including 1/2 useful screenshot(s). Guideline: 1/2 short paragraphs.
 
-Synthesis:
+Synthesis :  The synthesis process converts the hardware design code into a lower-level form that the FPGA can use. This step checks for errors, assigns resources, and ensures the design works correctly, meeting the timing and synchronization needs of the VGA driver. Without this process, you cannot implement.
 
-implementation:
+implementation :  The implementation process places and connects the synthesized design to the FPGA's hardware resources, like logic blocks, memory, and I/O pins. It ensures everything is set up to handle the VGA signal timing properly. After implementation, the design is loaded onto the FPGA, and you can test it using a monitor to check if the VGA driver works as expected.
 
 ### **Demonstration**
 Perhaps add a picture of your demo. Guideline: 1/2 sentences.
