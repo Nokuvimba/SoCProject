@@ -10,10 +10,14 @@ Add a short welcome message or introduction here. Aim to get the viewer interest
 ## **Template VGA Design**
 ### **Project Set-Up**
 The project is divided into 4 sections: Design sources, Constrains, Simulation sources and utility sources.
-Design Sources: In the design sources the u_clock is set to 25.000 and this controls the clock signals of the synthesis.The u_vga_sync handles the VGA synchronization and the u_colour_cycle manages VGA color transitions.
-                The files in this section are responsible for the colour gerenation on the screen.
-Contraints    : it consists of the Basys3_Master.xdc which is used to map logical signals to the physical pins on the board. This is to makes sure that both the simulation of the sofware and the synthesis on the hardwark                 work properly.
-Simulation    : it is used to simulates the software. It simulates the design but intyerfacing with the VGASync, ColourCycle and the VGATop. The Testbench tests all components.
+
+Design Sources:They contain the primary code that describes the hardware design for the for the VGA driver and is synthesized into a netlist during the synthesis process. In the design sources, the u_clock(clock wizard) is set to 25.000 and this controls the clock signals of the synthesis.The u_vga_sync handles the VGA synchronization and the u_colour_cycle manages VGA color transitions.The files in this section are responsible for the colour gerenation on the screen.
+
+                
+Contraints    : They are crucial during the implementation phase and they define physical specifications timing requirements, pin assignments it consists of the Basys3_Master.xdc which is used to map logical signals to the physical pins on the board. This is to make sure that both the simulation of the sofware and the synthesis on the hardware work properly.
+
+
+Simulation    : it is used to simulate the software. It simulates the design but interfacing with the VGASync, ColourCycle and the VGATop. The Testbench tests all components.
 
 <img src="https://github.com/Nokuvimba/SoCProject/blob/main/images/Screenshot%202024-11-12%20154634.png">
 
@@ -25,8 +29,13 @@ The simulation is a vitual environment that helps to validate the functionality 
 
 <img src="https://github.com/Nokuvimba/SoCProject/blob/main/images/SIMULATION%20WITH%20STATES.png">
 
-### **Synthesis**
+### **Synthesis and implementation process**
 Describe the synthesis and implementation processes. Consider including 1/2 useful screenshot(s). Guideline: 1/2 short paragraphs.
+
+Synthesis:
+
+implementation:
+
 ### **Demonstration**
 Perhaps add a picture of your demo. Guideline: 1/2 sentences.
 
