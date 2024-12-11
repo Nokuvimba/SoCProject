@@ -24,7 +24,17 @@ Utility  : The utility sources are not directly involved in synthesis or impleme
 <img src="https://github.com/Nokuvimba/SoCProject/blob/main/images/Screenshot%202024-11-12%20154634.png">
 
 ### **Template Code**
+
+The template code generated vertical color stripes based on the pixel's column(col) positions on the vga diplay which is the monitor. Each stripe is mapped onto a range of column values and every colour is determined by the red, green and blue outputs. The 8 colours that were created were black, blue, green, cyan, red, white, yellow and Magenta. These were based on the RGV values that were assigned.
+
+The code had inputs and outputs. The inputs include the clk, rst, row and col. The clk is the clock signal used to synchronize operations.The rst is the reset signal which is used to initialize or reset RGB outputs to zero. The row,col are 11-bit inputs which are used to specify the row and column coordinates of the pixel on the display. The outputs include the reg, green and blue which are the 4-bit RGB signals for the colour of thr current pixel. The red_reg, green_reg, blue_reg are registers used to hold the current RGB values. The red_next, green_next and blue_next are temporary registers used to hold the next RGB values that will be assigned.
+
+Inside the always @* determines where each colour is placed in each specific column range, for the range that is not mentioned a white colour would be displayed instead. The code inside the :`always@(posedge clk, posedge rst)`  is responsible for for updating the RGB values. When rst is high (1'b1), all the RGB ouputs would be set to zero(0000). The ouput would be black then(blank screen).
+
+<img src="https://github.com/Nokuvimba/SoCProject/blob/main/images/Screenshot%202024-11-26%20154637.png?raw=true">
+
 Outline the structure and design of the Verilog code templates you were given. What do they do? Include reference to how a VGA interface works. Guideline: 2/3 short paragraphs, consider including screenshot(s).
+
 ### **Simulation**
 The screenshot below show the simulation of the code we were given initially. This shows that the Testbench file is used to drive input signals which include clk (clock) and rst (reset) to simulate the VGATop.v. The outputs are the combinations of the 3 colours: red, blue and green. The waveforms confirm that the VGA controller cycles through pixel rows(row) and columns(col). There are 640 rows and 480 columns. I also could see that there are 8 states (from 0 to 7). ALL the outputs were displayed in decimal form so l changed the colours to be represented in binary form and the state to ---. Each state is a combination of different binary numbers, representing the 3 colours. For example in state 0 , all the colours are assigned 0000 and in state 5, red and green have the binary number 0000 and blue has the binary number 1111.
 The simulation is a vitual environment that helps to validate the functionality before programming the FVGA, errors and unexpected outputs can be debugged.
