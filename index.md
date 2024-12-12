@@ -54,6 +54,7 @@ implementation :  The implementation process places and connects the synthesized
 After going through the code l decided to first edit the Colourstripes code in the most simpler way to try and understand how each colour is mapped on each pixel. I changed the code by specifying the row sections l wanted each colout to be specified.I used the notes app to visualise what would expect to see on the monitor. This gave me a good understanging of counting pixels and how important it is to specify correctly the ranges of rows and columns a colour should be placed.
 
 <img src="https://raw.githubusercontent.com/Nokuvimba/SoCProject/refs/heads/main/images/Image.png">
+
 This is a snippet of the code. I used if statements to specify the ranges of rows and colomns l wanted each colour to be placed.
 
 <img src="https://github.com/Nokuvimba/SoCProject/blob/main/images/today2.png?raw=true">
@@ -61,7 +62,6 @@ This is a snippet of the code. I used if statements to specify the ranges of row
 This was the output on the monitor:
 
 <img src="https://github.com/Nokuvimba/SoCProject/blob/main/images/Image.jpg?raw=true">
-Perhaps add a picture of your demo. Guideline: 1/2 sentences.
 
 ## **My VGA Design Edit**
 Introduce your own design idea. Consider how complex/achievabble this might be or otherwise. Reference any research you do online (use hyperlinks).
