@@ -67,11 +67,17 @@ This was the output on the monitor:
 Introduce your own design idea. Consider how complex/achievabble this might be or otherwise. Reference any research you do online (use hyperlinks).
 
 <img src="https://github.com/Nokuvimba/SoCProject/blob/main/images/Image.jpg?raw=true">
+
 ### **Code Adaptation**
+
+<img src="https://github.com/Nokuvimba/SoCProject/blob/main/images/Screenshot%202024-12-10%20155418.png?raw=true">
+
 Briefly show how you changed the template code to display a different image. Demonstrate your understanding. Guideline: 1-2 short paragraphs.
 ### **Simulation**
 Show how you simulated your own design. Are there any things to note? Demonstrate your understanding. Add a screenshot. Guideline: 1-2 short paragraphs.
 ### **Synthesis**
+<img src="https://github.com/Nokuvimba/SoCProject/blob/main/images/SynthesizedDesign.png?raw=true">
+
 Describe the synthesis & implementation outputs for your design, are there any differences to that of the original design? Guideline 1-2 short paragraphs.
 ### **Demonstration**
 If you get your own design working on the Basys3 board, take a picture! Guideline: 1-2 sentences.
