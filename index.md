@@ -33,7 +33,7 @@ Inside the always @* determines where each colour is placed in each specific col
 
 <img src="https://github.com/Nokuvimba/SoCProject/blob/main/images/Screenshot%202024-11-26%20154637.png?raw=true">
 
-
+<img srs="https://github.com/Nokuvimba/SoCProject/blob/main/images/colorCycle.png?raw=true">
 
 
 ### **Simulation**
@@ -78,9 +78,21 @@ Show how you simulated your own design. Are there any things to note? Demonstrat
 ### **Synthesis**
 <img src="https://github.com/Nokuvimba/SoCProject/blob/main/images/SynthesizedDesign.png?raw=true">
 
+<img src="https://github.com/Nokuvimba/SoCProject/blob/main/images/implementedDesign.png?raw=true">
+
+<img src="https://github.com/Nokuvimba/SoCProject/blob/main/images/ImplementedDesign2.png?raw=true">
+
+
+
 Describe the synthesis & implementation outputs for your design, are there any differences to that of the original design? Guideline 1-2 short paragraphs.
 ### **Demonstration**
 If you get your own design working on the Basys3 board, take a picture! Guideline: 1-2 sentences.
+
+rtlAnalysis
+<img src="https://github.com/Nokuvimba/SoCProject/blob/main/images/RtlAnalysis.png?raw=true">
+
+monitor Output
+<img src="https://github.com/Nokuvimba/SoCProject/blob/main/images/finalOutput.jpg?raw=true">
 
 ## **More Markdown Basics**
 This is a paragraph. Add an empty line to start a new paragraph.
