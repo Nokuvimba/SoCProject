@@ -34,6 +34,8 @@ Inside the always @* determines where each colour is placed in each specific col
 <img src="https://github.com/Nokuvimba/SoCProject/blob/main/images/Screenshot%202024-11-26%20154637.png?raw=true">
 
 
+
+
 ### **Simulation**
 The screenshot below show the simulation of the code we were given initially. This shows that the Testbench file is used to drive input signals which include clk (clock) and rst (reset) to simulate the VGATop.v. The outputs are the combinations of the 3 colours: red, blue and green. The waveforms confirm that the VGA controller cycles through pixel rows(row) and columns(col). There are 640 rows and 480 columns. I also could see that there are 8 states (from 0 to 7). ALL the outputs were displayed in decimal form so l changed the colours to be represented in binary form and the state to ---. Each state is a combination of different binary numbers, representing the 3 colours. For example in state 0 , all the colours are assigned 0000 and in state 5, red and green have the binary number 0000 and blue has the binary number 1111.
 The simulation is a vitual environment that helps to validate the functionality before programming the FVGA, errors and unexpected outputs can be debugged.
@@ -48,6 +50,18 @@ Synthesis :  The synthesis process converts the hardware design code into a lowe
 implementation :  The implementation process places and connects the synthesized design to the FPGA's hardware resources, like logic blocks, memory, and I/O pins. It ensures everything is set up to handle the VGA signal timing properly. After implementation, the design is loaded onto the FPGA, and you can test it using a monitor to check if the VGA driver works as expected.
 
 ### **Demonstration**
+
+After going through the code l decided to first edit the Colourstripes code in the most simpler way to try and understand how each colour is mapped on each pixel. I changed the code by specifying the row sections l wanted each colout to be specified.I used the notes app to visualise what would expect to see on the monitor. This gave me a good understanging of counting pixels and how important it is to specify correctly the ranges of rows and columns a colour should be placed.
+
+<img srs="https://raw.githubusercontent.com/Nokuvimba/SoCProject/7253e57552f2a1a0dc11a3bc9fac61fafe979ab6/images/Image.png">
+
+This is a snippet of the code. I used if statements to specify the ranges of rows and colomns l wanted each colour to be placed.
+
+<img src="https://github.com/Nokuvimba/SoCProject/blob/main/images/today2.png?raw=true">
+
+This was the output on the monitor:
+
+<img src="https://github.com/Nokuvimba/SoCProject/blob/main/images/Image.jpg?raw=true">
 Perhaps add a picture of your demo. Guideline: 1/2 sentences.
 
 ## **My VGA Design Edit**
