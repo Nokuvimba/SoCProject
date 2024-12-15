@@ -110,3 +110,7 @@ Below is a view of the Register Transfer level of the edited FPGA design.
 
 The u_clock block generates a 25MHz clock (clk_out1) from an input clock `clk_in1`, the `clk_in1` is the input from the FPGA board and `reset` resets the clock module. The u_vga_sync(VGA Sync) block generates the synchronization signals (hSync, vSync) and pixel coordinates (row,col) required for the VGA output. It determines the horizontal and vertical pixel positions on the screen. The `u_colour_stripes` figures out the RGB colour values for each pixel based on the (row,col) position using the code l edited. The RTL_MUX are multiplexers.
 
+#### **Power used**
+The total power that was consumed by the FPGA design was 0.19W, this includes 62% of dynamic power (0.118W) and 38% of static power (0.072W). It shows that most of the power is drawn by the MMCM(Mixed-Mode Clock Manage) which has 98% of the total power. Everything else like logic and I/O uses very little power.
+<img src="https://github.com/Nokuvimba/SoCProject/blob/main/images/Power.png?raw=true">
+
