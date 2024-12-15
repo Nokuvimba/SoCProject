@@ -90,7 +90,7 @@ Show how you simulated your own design. Are there any things to note? Demonstrat
 
 ### **Synthesis**
 <img src="https://github.com/Nokuvimba/SoCProject/blob/main/images/SynthesizedDesign.png?raw=true">
-
+Below is the synthesized  schematic design after implementation. It shows how the verilog module is mapped onto the FPGA flip-flops, logic gates and buffers. The `IBUF` are buffers that are added during synthesis to stabilize and standardize input signals (the clock and reset). The `OBUF` buffers ensure the output signals are strong enough to drive the monitor.
 <img src="https://github.com/Nokuvimba/SoCProject/blob/main/images/implementedDesign.png?raw=true">
 
 <img src="https://github.com/Nokuvimba/SoCProject/blob/main/images/ImplementedDesign2.png?raw=true">
@@ -100,34 +100,14 @@ Show how you simulated your own design. Are there any things to note? Demonstrat
 Describe the synthesis & implementation outputs for your design, are there any differences to that of the original design? Guideline 1-2 short paragraphs.
 ### **Demonstration**
 
-If you get your own design working on the Basys3 board, take a picture! Guideline: 1-2 sentences.
-
-# **Monitor output**
+#### **Monitor output**
 The pattern that was generated was radial with a ripple effect of red and black circles.  This mainly because of how the atan angle was calculated leading to inaccurate colour mapping.The simplified equation only focused on x alone instead of the true arctangent computation.
 
 <img src="https://github.com/Nokuvimba/SoCProject/blob/main/images/finalOutput.jpg?raw=true">
 
-# **RTL Analysis**
+#### **RTL Analysis**
 Below is a view of the Register Transfer level of the edited FPGA design.
 <img src="https://github.com/Nokuvimba/SoCProject/blob/main/images/RtlAnalysis.png?raw=true">
 
-The u_clock block generates a 25MHz clock (clk_out1) from an input clock `clk_in1`, the `clk_in1` is the input from the FPGA board and `reset` resets the clock module. The u_vga_sync(VGA Sync) block generates the synchronization signals (hSync, vSync) and pixel coordinates (row,col) required for the VGA output. It determines the horizontal and vertical pixel positions on the screen. The `u_colour_stripes` figures out the RGB colour values for each pixel based on the (row,col) position using the code l edited. The RTL_MUX are multiplexers which are used 
+The u_clock block generates a 25MHz clock (clk_out1) from an input clock `clk_in1`, the `clk_in1` is the input from the FPGA board and `reset` resets the clock module. The u_vga_sync(VGA Sync) block generates the synchronization signals (hSync, vSync) and pixel coordinates (row,col) required for the VGA output. It determines the horizontal and vertical pixel positions on the screen. The `u_colour_stripes` figures out the RGB colour values for each pixel based on the (row,col) position using the code l edited. The RTL_MUX are multiplexers.
 
-
-## **More Markdown Basics**
-This is a paragraph. Add an empty line to start a new paragraph.
-
-Font can be emphasised as *Italic* or **Bold**.
-
-Code can be highlighted by using `backticks`.
-
-Hyperlinks look like this: [GitHub Help](https://help.github.com/).
-
-A bullet list can be rendered as follows:
-- vectors
-- algorithms
-- iterators
-
-Images can be added by uploading them to the repository in a /docs/assets/images folder, and then rendering using HTML via githubusercontent.com as shown in the example below.
-
-<img src="https://raw.githubusercontent.com/melgineer/fpga-vga-verilog/main/docs/assets/images/VGAPrjSrcs.png">
