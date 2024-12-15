@@ -51,7 +51,7 @@ implementation :  The implementation process places and connects the synthesized
 
 ### **Demonstration**
 
-After going through the code l decided to first edit the Colourstripes code in the most simpler way to try and understand how each colour is mapped on each pixel. I changed the code by specifying the row sections l wanted each colout to be specified.I used the notes app to visualise what would expect to see on the monitor. This gave me a good understanging of counting pixels and how important it is to specify correctly the ranges of rows and columns a colour should be placed.
+After going through the code l decided to first edit the Colourstripes code in the most simpler way to try and understand how each colour is mapped on each pixel. I changed the code by specifying the row sections l wanted each colour to be mapped on.I used the notes app to visualise what i expected to see on the monitor. This gave me a good understanging of counting pixels and how important it is to specify correctly the ranges of rows and columns a colour should be placed.
 
 <img src="https://raw.githubusercontent.com/Nokuvimba/SoCProject/refs/heads/main/images/Image.png">
 
