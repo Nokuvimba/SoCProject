@@ -59,7 +59,7 @@ This was the output on the monitor:
 
 ## **My VGA Design Edit**
 
-I aimed to create a colour wheel with colour transitions, this would produce an illusion of a moving wheel. I used the `https://www.pixilart.com/draw` to sketch my idea. I used the 64 by 48 pixel canvas , so that it would be easy to map the design on the 640 by 480 monitor. This design would involve using the atan function calculations to assign colours based on angle and radius.
+I aimed to create a colour wheel which would consist of different colours. I used the `https://www.pixilart.com/draw` to sketch my idea. I used the 64 by 48 pixel canvas , so that it would be easy to map the design on the 640 by 480 monitor. This design would involve using the atan function calculations to assign colours based on angle and radius.
 
 <img src="https://github.com/Nokuvimba/SoCProject/blob/main/images/pixel.jpg?raw=true">
 
