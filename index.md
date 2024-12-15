@@ -89,15 +89,14 @@ Briefly show how you changed the template code to display a different image. Dem
 Show how you simulated your own design. Are there any things to note? Demonstrate your understanding. Add a screenshot. Guideline: 1-2 short paragraphs.
 
 ### **Synthesis**
+The synthesised design layout shows how the design logic is physically mapped onto the FPGA hardware.
 <img src="https://github.com/Nokuvimba/SoCProject/blob/main/images/SynthesizedDesign.png?raw=true">
-Below is the synthesized  schematic design after implementation. It shows how the verilog module is mapped onto the FPGA flip-flops, logic gates and buffers. The `IBUF` are buffers that are added during synthesis to stabilize and standardize input signals (the clock and reset). The `OBUF` buffers ensure the output signals are strong enough to drive the monitor.
-<img src="https://github.com/Nokuvimba/SoCProject/blob/main/images/implementedDesign.png?raw=true">
 
+#### **Implementation**
+Below is the implementation schematic design . It shows how the verilog module is mapped onto the FPGA flip-flops, logic gates and buffers. The `IBUF` are buffers that are added to stabilize and standardize input signals (the clock and reset). The `OBUF` buffers ensure the output signals are strong enough to drive the monitor.
 <img src="https://github.com/Nokuvimba/SoCProject/blob/main/images/ImplementedDesign2.png?raw=true">
 
 
-
-Describe the synthesis & implementation outputs for your design, are there any differences to that of the original design? Guideline 1-2 short paragraphs.
 ### **Demonstration**
 
 #### **Monitor output**
