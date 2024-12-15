@@ -7,6 +7,8 @@ categories: demo
 
 Add a short welcome message or introduction here. Aim to get the viewer interested in what follows! Guideline: 1 or 2 sentences.
 
+Welcome to the FPGA VGA Driver Project , where l get to learn and produce my own design. This project demonstrates how to create a working VGA driver to display colours and patterns using an FPGA. The design involves synchronizing pixel data and generating RGB signals for a monitor using vivado.
+
 ## **Template VGA Design**
 ### **Project Set-Up**
 The project is divided into 4 sections: Design sources, Constrains, Simulation sources and utility sources.
@@ -33,9 +35,6 @@ Inside the always @* determines where each colour is placed in each specific col
 
 <img src="https://github.com/Nokuvimba/SoCProject/blob/main/images/Screenshot%202024-11-26%20154637.png?raw=true">
 
-<img srs="https://github.com/Nokuvimba/SoCProject/blob/main/images/colorCycle.png?raw=true">
-
-
 ### **Simulation**
 The screenshot below show the simulation of the code we were given initially. This shows that the Testbench file is used to drive input signals which include clk (clock) and rst (reset) to simulate the VGATop.v. The outputs are the combinations of the 3 colours: red, blue and green. The waveforms confirm that the VGA controller cycles through pixel rows(row) and columns(col). There are 640 rows and 480 columns. I also could see that there are 8 states (from 0 to 7). ALL the outputs were displayed in decimal form so l changed the colours to be represented in binary form and the state to ---. Each state is a combination of different binary numbers, representing the 3 colours. For example in state 0 , all the colours are assigned 0000 and in state 5, red and green have the binary number 0000 and blue has the binary number 1111.
 The simulation is a vitual environment that helps to validate the functionality before programming the FVGA, errors and unexpected outputs can be debugged.
@@ -43,7 +42,6 @@ The simulation is a vitual environment that helps to validate the functionality 
 <img src="https://github.com/Nokuvimba/SoCProject/blob/main/images/SIMULATION%20WITH%20STATES.png?raw=true">
 
 ### **Synthesis and implementation process**
-Describe the synthesis and implementation processes. Consider including 1/2 useful screenshot(s). Guideline: 1/2 short paragraphs.
 
 Synthesis :  The synthesis process converts the hardware design code into a lower-level form that the FPGA can use. This step checks for errors, assigns resources, and ensures the design works correctly, meeting the timing and synchronization needs of the VGA driver. Without this process, you cannot implement.
 
@@ -66,6 +64,7 @@ This was the output on the monitor:
 ## **My VGA Design Edit**
 Introduce your own design idea. Consider how complex/achievabble this might be or otherwise. Reference any research you do online (use hyperlinks).
 
+The idea l has was creating a wheel with different colours that 
 <img src="https://github.com/Nokuvimba/SoCProject/blob/main/images/Image.jpg?raw=true">
 
 ### **Code Adaptation**
